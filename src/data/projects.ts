@@ -13,6 +13,7 @@ export interface Project {
   highlights: string[];
   repo?: string;
   featured?: boolean;
+  image?: string; // 실 스크린샷(public/ 기준 경로). 없으면 디자인 커버 사용
 }
 
 export const categories: { key: Category | "all"; label: string }[] = [

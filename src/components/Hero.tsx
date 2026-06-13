@@ -5,7 +5,16 @@ import { projects } from "../data/projects";
 export function Hero() {
   const total = projects.length;
   return (
-    <section id="top" className="relative mx-auto max-w-5xl px-5 pt-36 pb-20 sm:px-8 sm:pt-44 sm:pb-28">
+    <section id="top" className="relative mx-auto max-w-5xl overflow-hidden px-5 pt-36 pb-20 sm:px-8 sm:pt-44 sm:pb-28">
+      {/* 은은한 컬러 데코 */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-24 -top-10 h-80 w-80 rounded-full bg-gradient-to-br from-indigo-400/30 via-sky-400/20 to-emerald-300/20 blur-3xl sm:h-[28rem] sm:w-[28rem]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-32 top-40 h-72 w-72 rounded-full bg-gradient-to-br from-amber-300/20 to-rose-300/20 blur-3xl"
+      />
       <motion.p
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

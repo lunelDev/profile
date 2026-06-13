@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import type { Project } from "../data/projects";
+import { Cover } from "./Cover";
 
 export function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
   useEffect(() => {
@@ -25,31 +26,34 @@ export function ProjectModal({ project, onClose }: { project: Project | null; on
           onClick={onClose}
         >
           <motion.div
-            className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl bg-white p-7 sm:rounded-3xl sm:p-9"
+            className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl bg-white sm:rounded-3xl"
             initial={{ y: 40, opacity: 0.6 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 40, opacity: 0 }}
             transition={{ type: "spring", damping: 28, stiffness: 280 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-xs text-[var(--color-muted)]">
-                  {project.org}
-                  {project.period ? ` · ${project.period}` : ""}
-                </p>
-                <h3 className="mt-1 text-2xl font-bold tracking-tight">{project.title}</h3>
-              </div>
+            {/* 커버 배너 */}
+            <div className="relative">
+              <Cover project={project} className="h-40 w-full rounded-t-3xl sm:h-48" />
               <button
                 onClick={onClose}
                 aria-label="닫기"
-                className="shrink-0 rounded-full border border-[var(--color-line)] px-3 py-1 text-sm text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)]"
+                className="absolute right-4 top-4 rounded-full bg-black/30 px-3 py-1 text-sm text-white backdrop-blur-sm transition-colors hover:bg-black/50"
               >
                 닫기
               </button>
+              <div className="absolute bottom-4 left-7 right-7">
+                <p className="text-xs font-medium text-white/80">
+                  {project.org}
+                  {project.period ? ` · ${project.period}` : ""}
+                </p>
+                <h3 className="mt-0.5 text-2xl font-bold tracking-tight text-white drop-shadow">{project.title}</h3>
+              </div>
             </div>
 
-            <p className="mt-5 text-[15px] leading-relaxed text-[var(--color-ink)]/80">{project.summary}</p>
+            <div className="p-7 sm:p-9">
+            <p className="text-[15px] leading-relaxed text-[var(--color-ink)]/80">{project.summary}</p>
 
             <div className="mt-6">
               <h4 className="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent)]">
@@ -94,6 +98,7 @@ export function ProjectModal({ project, onClose }: { project: Project | null; on
                 GitHub에서 보기 →
               </a>
             )}
+            </div>
           </motion.div>
         </motion.div>
       )}
