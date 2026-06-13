@@ -46,6 +46,7 @@ export const projects: Project[] = [
   },
   {
     id: "rtm",
+    image: "/shots/rtm.jpg",
     title: "Run To The Moon",
     org: "㈜게이트웨이즈",
     period: "2020–2023",
@@ -65,6 +66,7 @@ export const projects: Project[] = [
   },
   {
     id: "amazingcore",
+    image: "/shots/amazingcore.jpg",
     title: "AmazingCore — 코어 운동 게임",
     org: "㈜게이트웨이즈",
     period: "2020–2023",
@@ -84,6 +86,7 @@ export const projects: Project[] = [
   },
   {
     id: "citytour",
+    image: "/shots/citytour.jpg",
     title: "시티투어 부산 — 자전거 운동게임",
     org: "㈜게이트웨이즈",
     period: "2020–2023",
@@ -102,6 +105,7 @@ export const projects: Project[] = [
   },
   {
     id: "bmp2",
+    image: "/shots/bmp2.jpg",
     title: "보자마자 PLAY 2 — 미니게임 10종",
     org: "㈜게이트웨이즈 (팀)",
     period: "2020–2023",
@@ -120,6 +124,7 @@ export const projects: Project[] = [
   },
   {
     id: "bcm",
+    image: "/shots/bcm.jpg",
     title: "복둥이의 시간여행 — AR 박물관",
     org: "㈜게이트웨이즈",
     period: "2020–2023",
@@ -136,6 +141,7 @@ export const projects: Project[] = [
   },
   {
     id: "brain",
+    image: "/shots/brain.jpg",
     title: "보자마자 브레인 / 케어 — 시니어 인지훈련",
     org: "㈜게이트웨이즈",
     period: "2020–2023",
@@ -156,6 +162,7 @@ export const projects: Project[] = [
   // ── 엠씨미디어 (교육) ──
   {
     id: "nb-nature",
+    image: "/shots/nb-nature.jpg",
     title: "자연의 신비 모험",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -168,6 +175,7 @@ export const projects: Project[] = [
   },
   {
     id: "nb-music",
+    image: "/shots/nb-music.jpg",
     title: "음악 마법 모험",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -180,6 +188,7 @@ export const projects: Project[] = [
   },
   {
     id: "nb-clock",
+    image: "/shots/nb-clock.jpg",
     title: "지금 몇 시일까요?",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -216,6 +225,7 @@ export const projects: Project[] = [
   },
   {
     id: "nmb",
+    image: "/shots/nmb.jpg",
     title: "세포의 세계",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -228,6 +238,7 @@ export const projects: Project[] = [
   },
   {
     id: "net",
+    image: "/shots/net.jpg",
     title: "물의 상태 변화 관찰하기",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -240,6 +251,7 @@ export const projects: Project[] = [
   },
   {
     id: "lht",
+    image: "/shots/lht.jpg",
     title: "PCR 검사 탐구활동",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -254,6 +266,7 @@ export const projects: Project[] = [
   // ── 웹 · 풀스택 ──
   {
     id: "snaptide",
+    image: "/shots/snaptide.jpg",
     title: "SnapTide — 사진 SNS",
     org: "개인",
     category: "web",
@@ -268,6 +281,7 @@ export const projects: Project[] = [
   },
   {
     id: "filmcritiq",
+    image: "/shots/filmcritiq.jpg",
     title: "FilmCritiq — 영화 리뷰",
     org: "개인",
     category: "web",
@@ -282,6 +296,7 @@ export const projects: Project[] = [
   },
   {
     id: "shakepot",
+    image: "/shots/shakepot.jpg",
     title: "Team_ShakePot — 단백질 정보 플랫폼",
     org: "팀 (3인)",
     category: "web",
@@ -321,6 +336,7 @@ export const projects: Project[] = [
   },
   {
     id: "restgallery",
+    image: "/shots/restgallery.jpg",
     title: "ImageGalleryAPI",
     org: "개인",
     category: "ai",
