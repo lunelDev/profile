@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --color-ink: #18181b;
+  --color-muted: #6b7280;
+  --color-line: #e7e7e9;
+  --color-bg: #fbfbfa;
+  --color-accent: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #dbeafe;
+}
+
+/* 은은한 등장용 - Framer 미작동 시에도 보이도록 기본은 opacity 1 */
+.fade-up {
+  will-change: transform, opacity;
+}
