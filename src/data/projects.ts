@@ -201,6 +201,7 @@ export const projects: Project[] = [
   },
   {
     id: "nb-english",
+    image: "/shots/nb-english.jpg",
     title: "잃어버린 영어주문을 찾아서",
     org: "엠씨미디어 솔루션",
     period: "2025",
@@ -213,6 +214,7 @@ export const projects: Project[] = [
   },
   {
     id: "nb-art",
+    image: "/shots/nb-art.jpg",
     title: "우리들의 색깔 학교",
     org: "엠씨미디어 솔루션",
     period: "2025",
