@@ -9,7 +9,7 @@ export const profile = {
   greeting: "안녕하세요, 도전을 즐기고 경험을 완성하는 개발자 박지수입니다.",
   // About 통합 소개 (성장 서사 한 편)
   aboutMe:
-    "XR/AR 콘텐츠·실감형 피트니스·교육용 시뮬레이션 등 다양한 Unity 프로젝트를 경험하며 성장해 왔습니다. LeapMotion·Kinect·FIT-TAG·Leia 3D SDK처럼 구조가 서로 다른 장비를 다루며 Unity·C# 기반 로직 설계와 상호작용 구현, 성능 최적화에 익숙해졌고, 최근에는 OpenAI API 연동과 TCP/IP 데이터 시각화로 서버 통신 구조를, Spring Boot·React 웹 프로젝트로 CRUD·인증·API 개발 흐름까지 익혔습니다. 기술을 단순히 쓰는 것을 넘어, 새로운 문제를 분석하고 해결하며 경험을 완성하는 개발자가 되고자 합니다.",
+    "XR/AR 콘텐츠·실감형 피트니스·교육용 시뮬레이션 등 다양한 Unity 프로젝트를 경험하며 성장해 왔습니다. LeapMotion·Kinect·FIT-TAG·Leia 3D SDK처럼 구조가 서로 다른 장비를 다루며 Unity·C# 기반 로직 설계와 상호작용 구현, 성능 최적화에 익숙해졌고, 최근에는 OpenAI API 연동과 TCP/IP 데이터 시각화로 서버 통신 구조를, React·Next.js 프론트엔드와 Spring Boot 기반 개인 웹 프로젝트로 클라이언트–서버 데이터 흐름을 익혔습니다. 새로운 기술을 빠르게 흡수하는 강점을 살려 Claude 같은 AI 도구도 적극 활용하되, 결과는 직접 코드·사실 검증을 거쳐 신뢰성을 확보하며 일합니다.",
   about: [
     {
       title: "센서·하드웨어 인터랙션",
@@ -20,8 +20,8 @@ export const profile = {
       body: "진행 시스템·랜덤 맵(Cinemachine)·상점·로비·UI 흐름·다국어를 직접 설계·구현. Android 빌드부터 Google Play(AAB) 배포까지 전 과정 경험.",
     },
     {
-      title: "웹 & 서버 연동",
-      body: "Spring Boot(JWT)·React·Next.js로 인증·CRUD·이미지 업로드를 구현하고, OpenAI API·TCP/IP 연동을 다뤘습니다. 개인·실무 프로젝트로 클라이언트–서버 데이터 흐름을 익혔습니다.",
+      title: "웹 프론트 & 서버 연동",
+      body: "React·Next.js로 프론트엔드를 구현하고(실무: BrainFriends Next.js 16), Spring Boot·JWT로 인증·CRUD 등 기본적인 백엔드와 REST 연동을 개인 프로젝트로 익혔습니다. 클라이언트–서버 데이터 흐름을 이해하고 다룹니다.",
     },
   ],
   contact: {
@@ -55,7 +55,7 @@ export const profile = {
   ],
   skills: {
     "Game / XR": ["Unity", "C#", "URP", "Cinemachine", "Timeline", "DOTween", "Leia 3D", "MediaPipe", "Vuforia", "LeapMotion"],
-    "Web / Server": ["Spring Boot", "JWT", "React", "TypeScript", "Next.js", "MariaDB", "REST API"],
-    "Tools": ["Git", "Android / Google Play", "Firebase", "OpenAI API", "Figma"],
+    "Web / Server": ["React", "TypeScript", "Next.js", "Spring Boot", "JWT", "MariaDB", "REST API"],
+    "Tools": ["Git", "Android / Google Play", "Firebase", "OpenAI API", "AI 도구 활용", "Figma"],
   },
 };
