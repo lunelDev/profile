@@ -1,13 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Pretendard", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  --color-ink: #18181b;
-  --color-muted: #6b7280;
-  --color-line: #e7e7e9;
-  --color-bg: #fbfbfa;
-  --color-accent: #2563eb;
+  --font-sans: "Pretendard Variable", "Pretendard", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  /* ── Material You 다크 (Stitch 토큰 그대로) ── */
+  --color-ink: #e6e0e9; /* on-surface (거의 흰색) */
+  --color-muted: #cbc4d2; /* on-surface-variant */
+  --color-line: rgba(255, 255, 255, 0.1); /* 얇은 경계선 */
+  --color-bg: #0b0b0f; /* background (거의 검정) */
+  --color-surface: #141218; /* surface-container */
+  --color-surface-variant: #1a1a24; /* surface-variant */
+  --color-primary: #cfbcff; /* 라벤더 포인트 */
+  --color-on-primary: #381e72; /* 포인트 위 텍스트 */
+  --color-primary-container: #6750a4; /* 퍼플 (버튼 그라데이션) */
+  --color-tertiary: #e7c365; /* 골드 보조 포인트 */
+  --color-accent: #cfbcff; /* = primary */
 }
 
 html {
@@ -20,13 +27,66 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  /* 한글이 단어 중간에서 끊기지 않도록 (핵심) */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
 }
 
 ::selection {
-  background: #dbeafe;
+  background: rgba(207, 188, 255, 0.3);
 }
 
-/* 은은한 등장용 - Framer 미작동 시에도 보이도록 기본은 opacity 1 */
+/* 글래스모피즘 카드 */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* 버튼 그라데이션 (퍼플: primary-container → primary) */
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #6750a4 0%, #cfbcff 100%);
+}
+/* 헤드라인 그라데이션 (라벤더 → 골드) */
+.text-gradient {
+  background: linear-gradient(135deg, #cfbcff 0%, #e7c365 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  line-height: 1;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b292f;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* 은은한 등장용 */
 .fade-up {
   will-change: transform, opacity;
 }

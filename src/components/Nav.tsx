@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#contact", label: "Contact" },
+  { href: "#work", label: "Projects" },
 ];
 
 export function Nav() {
@@ -18,22 +17,31 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-        scrolled ? "border-b border-[var(--color-line)] bg-[var(--color-bg)]/85 backdrop-blur" : "bg-transparent"
+        scrolled ? "border-b border-white/10 bg-[var(--color-surface)]/70 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="text-sm font-semibold tracking-tight">
-          박지수<span className="text-[var(--color-muted)]"> · Jisu</span>
+      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5 sm:h-20 sm:px-8">
+        {/* 간단 로고 */}
+        <a href="#top" className="text-lg font-extrabold tracking-tight text-[var(--color-primary)]">
+          J.Park
         </a>
-        <ul className="flex items-center gap-5 text-sm text-[var(--color-muted)] sm:gap-7">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a href={l.href} className="transition-colors hover:text-[var(--color-ink)]">
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-6 sm:gap-8">
+          <ul className="hidden items-center gap-7 text-sm font-medium text-[var(--color-muted)] md:flex">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} className="transition-colors hover:text-[var(--color-ink)]">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contact"
+            className="rounded-full bg-gradient-accent px-5 py-2 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95"
+          >
+            연락하기
+          </a>
+        </div>
       </nav>
     </header>
   );
